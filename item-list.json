@@ -1,0 +1,50 @@
+{
+    "Bucket": {
+        "texture-path": "res://Assets/Inventory_Items/bucket.png",
+        "craftable-item": {
+            "item-name": "Light-Bulb",
+            "combine-item-result": "Magnifyer"
+        },
+        "description": ["This is a bucket."]
+    },
+    "Light-Bulb" :{
+        "texture-path": "res://Assets/Inventory_Items/bulb.png",
+        "craftable-item": {
+            "item-name": "Bucket",
+            "combine-item-result": "Magnifyer"
+        },
+        "description": ["This is a Light-Bulb."]
+    },
+    "Magnifyer" :{
+        "texture-path": "res://Assets/Inventory_Items/mglass.png",
+        "craftable-item": {
+            "item-name": "Lighter",
+            "combine-item-result": "Tape"
+        },
+        "description": ["This is a Magnifyer."]
+    },
+    "Lighter": {
+        "texture-path": "res://Assets/Inventory_Items/lighter.png",
+        "craftable-item": {
+            "item-name": "Magnifyer",
+            "combine-item-result": "Tape"
+        },
+        "description": ["This is a Lighter."]
+    },
+    "Tape": {
+        "texture-path": "res://Assets/Inventory_Items/tape.png",
+        "craftable-item": {
+            "item-name": "Bucket",
+            "combine-item-result": "Light-Bulb"
+        },
+        "description": ["This is a Tape."]
+    },
+    "Wrench": {
+        "texture-path": "res://Assets/Inventory_Items/wrench.png",
+        "craftable-item": {
+            "item-name": "Tape",
+            "combine-item-result": "Bucket"
+        },
+        "description": ["This is a Wrench."]
+    }
+}
