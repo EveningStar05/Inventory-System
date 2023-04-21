@@ -9,16 +9,16 @@ onready var gridcontainter = get_node("Background/ScrollContainer/GridContainer"
 onready var scroll_container = get_node("Background/ScrollContainer")
 onready var next_button = get_node("Background/Next")
 onready var prev_button = get_node("Background/Previous")
-onready var grid_container_children = gridcontainter.get_children()
+onready var slot_item = get_tree().get_nodes_in_group("slots")
 
 func _ready():
 	panel.hide()
 	Inventory.connect("extend_slot", self, "_on_extend_slot")
-	for slots in grid_container_children:
+	for slots in slot_item:
 		slots.connect("inspect_item", self, "_on_Slot_inspect_item")
 		
 # Extend inventory slot
-func _on_extend_slot():
+func _on_extend_slot() -> void:
 	
 	var script = load("res://Scripts/Item-slot.gd") # preload the script
 	var new_slot = TextureRect.new()
@@ -36,7 +36,7 @@ func _on_extend_slot():
 	new_slot.connect("inspect_item", self, "_on_Slot_inspect_item") # connect the new node to the signal
 
 # Inspect item on inventory
-func _on_Slot_inspect_item(slot_index):
+func _on_Slot_inspect_item(slot_index: int):
 	var select_item = Inventory.inventory_list[slot_index] # select the item to inspect from inventor
 	
 	if select_item != null:
@@ -57,7 +57,8 @@ func _on_ToggleButton_toggled(button_pressed):
 	else:
 		panel.hide()
 
-# scroll button		
+# scroll button
+# Note: Scrollbar is hidden.
 func _on_Next_pressed():
 	scroll_container.scroll_horizontal += 95
 	

@@ -44,15 +44,16 @@ func add_item(item_name: Node2D) -> void: # item_name: Node
 	emit_signal("display_item_to_inventory", itemIndex, texture_path) # checks wether the inventory is full or not
 	
 func get_craft_item(selected_item): # helper function, get craftable item
-	print_debug(selected_item)
 	var get_item_name = ImportData.item_list[selected_item]["craftable-item"]["combine-item-result"]
 	return get_item_name
 	
 func craft_item(item_index, target_item_index): # item_index: index, target_item_index: index
 	var new_item = get_craft_item(inventory_list[item_index]) # set the new_item as the target_item_index
+	
 	# update the inventory and display with the new item
 	inventory_list[target_item_index] = new_item 
 	texture_path = ImportData.item_list[new_item]["texture-path"]
+	
 	emit_signal("display_item_to_inventory", target_item_index, texture_path)
 	remove_item(item_index) # remove the previous item (the selected item)
 	
@@ -63,7 +64,6 @@ func remove_item(item_index):
 	emit_signal("display_item_to_inventory", item_index, null)
 	
 func swap_item(item_index, target_item_index): # item_index: data[origin-item-index], target_item_index: data[target_item_index]
-	
 	var targetItem = inventory_list[target_item_index]
 	var current_item = inventory_list[item_index]
 	
