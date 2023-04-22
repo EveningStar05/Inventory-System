@@ -8,3 +8,6 @@ Assets source:
 - Inventory items: https://ilkaytobello.itch.io/inventory-items
 - Texture: https://karwisch.itch.io/pxui-basic
 - Icons: https://curiousvault.itch.io/google
+- Fonts: 
+    Oswald: https://fonts.google.com/specimen/Oswald?query=oswald
+    Carlito: https://fonts.google.com/specimen/Carlito
