@@ -46,12 +46,12 @@ func _on_Slot_inspect_item(slot_index: int):
 		main_node.add_child(window_scene)
 		
 		# set the item data here
-		window_scene.get_node("TextureRect/Label").set_text(select_item) # set the item name
-		window_scene.get_node("MarginContainer/RichTextLabel").set_text(item_description[0]) # set the item description
-		window_scene.get_node("TextureRect").texture = load(ImportData.item_list[select_item]["texture-path"]) # set the item texture)
+		window_scene.get_node("PanelContainer/TextureRect/Label").set_text(select_item)
+		window_scene.get_node("PanelContainer2/RichTextLabel").bbcode_text = item_description[0] # set the item description
+		window_scene.get_node("PanelContainer/TextureRect").texture = load(ImportData.item_list[select_item]["texture-path"]) # set the item texture)
 		
 # Toggle button
-func _on_ToggleButton_toggled(button_pressed):
+func _on_ToggleButton_toggled(button_pressed)-> void:
 	if button_pressed:
 		panel.show()
 	else:
@@ -59,8 +59,8 @@ func _on_ToggleButton_toggled(button_pressed):
 
 # scroll button
 # Note: Scrollbar is hidden.
-func _on_Next_pressed():
+func _on_Next_pressed() -> void:
 	scroll_container.scroll_horizontal += 95
 	
-func _on_Previous_pressed():
+func _on_Previous_pressed() -> void:
 	scroll_container.scroll_horizontal -= 95

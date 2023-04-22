@@ -5,7 +5,7 @@
             "item-name": "Light-Bulb",
             "combine-item-result": "Magnifyer"
         },
-        "description": ["This is a bucket."]
+        "description": ["This is a magical bucket."]
     },
     "Light-Bulb" :{
         "texture-path": "res://Assets/Inventory_Items/bulb.png",
@@ -13,7 +13,7 @@
             "item-name": "Bucket",
             "combine-item-result": "Magnifyer"
         },
-        "description": ["This is a Light-Bulb."]
+        "description": ["This is a light bulb."]
     },
     "Magnifyer" :{
         "texture-path": "res://Assets/Inventory_Items/mglass.png",
