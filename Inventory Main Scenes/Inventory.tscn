@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/PXUI-Basic/panel_Example1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/PXUI-Basic/arrow_example.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Item-slot.gd" type="Script" id=3]
-[ext_resource path="res://Assets/UI actions/Apps.png" type="Texture" id=4]
-[ext_resource path="res://Assets/UI actions/Arrow Back Ios.png" type="Texture" id=6]
+[ext_resource path="res://Assets/PXUI-Basic/checkbox_check_example.png" type="Texture" id=4]
+[ext_resource path="res://Assets/PXUI-Basic/checkbox_example.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/Inventory-script.gd" type="Script" id=9]
 
 [sub_resource type="StyleBoxEmpty" id=3]
@@ -127,34 +128,35 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -40.0
+margin_left = -12.0
 margin_top = -20.0
+margin_right = 28.0
 margin_bottom = 20.0
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 2 )
 expand = true
-stretch_mode = 5
-flip_h = true
+stretch_mode = 3
 
 [node name="Previous" type="TextureButton" parent="Background"]
 anchor_top = 0.5
 anchor_bottom = 0.5
+margin_left = -27.0
 margin_top = -20.0
-margin_right = 40.0
+margin_right = 13.0
 margin_bottom = 20.0
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 2 )
 expand = true
-stretch_mode = 5
+stretch_mode = 3
+flip_h = true
 
 [node name="ToggleButton" type="TextureButton" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -81.0
-margin_top = 78.0
-margin_right = -41.0
-margin_bottom = 118.0
-rect_rotation = 90.3461
+margin_left = -514.0
+margin_right = -312.0
+margin_bottom = 202.0
 toggle_mode = true
-texture_normal = ExtResource( 4 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 

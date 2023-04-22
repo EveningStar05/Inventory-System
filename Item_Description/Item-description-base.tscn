@@ -1,59 +1,79 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/UI actions/Close.png" type="Texture" id=1]
 [ext_resource path="res://Item_Description/Item-description-base.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fonts/Carlito/Carlito-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Fonts/Oswald/static/Oswald-Regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+use_mipmaps = true
+extra_spacing_top = 10
+font_data = ExtResource( 5 )
 
 [node name="PopupWindowPanel" type="Panel"]
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-margin_left = -375.0
-margin_right = 376.0
-margin_bottom = 396.0
+anchor_bottom = 0.5
+margin_left = -375.5
+margin_top = -198.0
+margin_right = 375.5
+margin_bottom = 198.0
 script = ExtResource( 2 )
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -293.0
-margin_top = -94.0
-margin_right = -50.0
-margin_bottom = 46.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
-margin_right = 243.0
-margin_bottom = 140.0
-
-[node name="TextureRect" type="TextureRect" parent="."]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 57.0
-margin_top = -88.5
-margin_right = 152.0
-margin_bottom = 6.5
-rect_min_size = Vector2( 95, 95 )
-expand = true
-stretch_mode = 4
-
-[node name="Label" type="Label" parent="TextureRect"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -24.5
-margin_top = -59.0
-margin_right = 24.5
-margin_bottom = -45.0
-size_flags_horizontal = 2
-align = 1
-valign = 1
-
 [node name="Close" type="TextureButton" parent="."]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -40.0
-margin_bottom = 40.0
+margin_left = 568.0
+margin_top = -131.0
+margin_right = 879.0
+margin_bottom = 180.0
 texture_normal = ExtResource( 1 )
 expand = true
 stretch_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 73.0
+margin_top = -100.0
+margin_right = 273.0
+margin_bottom = 100.0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 193.0
+margin_bottom = 193.0
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="PanelContainer/TextureRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -112.0
+margin_top = -40.0
+margin_right = 112.0
+margin_bottom = -19.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+margin_left = 348.0
+margin_top = 38.0
+margin_right = 673.0
+margin_bottom = 363.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer2"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 318.0
+margin_bottom = 318.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+fit_content_height = true
+scroll_active = false
 
 [connection signal="pressed" from="Close" to="." method="_on_Close_pressed"]

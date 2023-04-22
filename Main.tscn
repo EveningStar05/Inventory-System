@@ -14,20 +14,22 @@
 margin_left = -6.0
 margin_right = -6.0
 
-[node name="Light-Bulb" parent="." instance=ExtResource( 1 )]
-position = Vector2( 683, 289 )
+[node name="ItemList" type="Node2D" parent="."]
 
-[node name="Bucket" parent="." instance=ExtResource( 7 )]
-position = Vector2( 843, 287 )
+[node name="Light-Bulb" parent="ItemList" instance=ExtResource( 1 )]
+position = Vector2( 700, 374 )
 
-[node name="Lighter" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1010, 291 )
+[node name="Bucket" parent="ItemList" instance=ExtResource( 7 )]
+position = Vector2( 860, 372 )
 
-[node name="Magnifyer" parent="." instance=ExtResource( 5 )]
-position = Vector2( 881, 457 )
+[node name="Lighter" parent="ItemList" instance=ExtResource( 4 )]
+position = Vector2( 1027, 376 )
 
-[node name="Tape" parent="." instance=ExtResource( 3 )]
-position = Vector2( 687, 454 )
+[node name="Magnifyer" parent="ItemList" instance=ExtResource( 5 )]
+position = Vector2( 898, 542 )
 
-[node name="Wrench" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1163, 280 )
+[node name="Tape" parent="ItemList" instance=ExtResource( 3 )]
+position = Vector2( 704, 539 )
+
+[node name="Wrench" parent="ItemList" instance=ExtResource( 6 )]
+position = Vector2( 1180, 365 )
