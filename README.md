@@ -17,4 +17,7 @@ This inventory system has some basic features, which inspired from point and cli
 - Craft Item: you can craft items within the Inventory.
 - Inspect item: you can double click an item in the inventory and a custom pop up window will show up.
 
+![Inventory system demo](https://user-images.githubusercontent.com/98946459/233844892-38955a7f-9941-4ccf-b4f1-48d6c595a9ff.gif)
+
+
 Does not include dropping items to world (Main scene), coming soon!
