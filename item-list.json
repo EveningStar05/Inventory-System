@@ -6,7 +6,7 @@
             "combine-item-result": "Magnifyer"
         },
         "description": ["This is a magical bucket."]
-    },
+    }, 
     "Light-Bulb" :{
         "texture-path": "res://Assets/Inventory_Items/bulb.png",
         "craftable-item": {

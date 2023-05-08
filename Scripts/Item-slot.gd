@@ -62,7 +62,7 @@ func can_drop_data(_position, data): # checks wether this item can be drop at th
 	else:
 		data["target_item_name"] = Inventory.inventory_list[target_index] # set the target name from the inventory list
 		data["target_texture"] = texture
-	
+		
 	if ImportData.item_list.keys().has(data["origin-item-name"]): # if the draggable data exist in the dictionary
 		if ImportData.item_list[data["origin-item-name"]]["craftable-item"]["item-name"] == data["target_item_name"]:# if the drag data is equal to the target item.
 			return true

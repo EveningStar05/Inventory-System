@@ -51,7 +51,8 @@ func craft_item(item_index: int, target_item_index: int) -> String: # item_index
 	remove_item(item_index) # remove the previous item (the selected item)
 
 	return new_item
-	
+
+# remove item from list and update the display texture
 func remove_item(item_index: int):
 	inventory_list[item_index] = null
 	emit_signal("display_item_to_inventory", item_index, null)
